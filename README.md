@@ -1,4 +1,4 @@
-rottenducks
+DUCKS
 ===========
 
-Rotten Ducks.
+DUCKS EVERYWHERE
