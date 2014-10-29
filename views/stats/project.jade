@@ -1,0 +1,18 @@
+html
+  head
+    title!= title
+    link(rel="stylesheet", href="/css/app.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  body
+    include ../header.jade
+
+    div.project
+      h1!=project.name
+      p!=project.description
+
+      each value,attribute in project
+        if attribute.substring(0, 1) != "_" && attribute.substring(0,3) != "$__" && attribute != "isNew" && attribute != "errors" && attribute != "save" && attribute != "db" && attribute != "discriminators"
+          h4!=attribute
+          p!=value
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")

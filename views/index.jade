@@ -1,0 +1,11 @@
+html
+  head
+    title!= title
+    link(rel="stylesheet", href="css/app.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  body
+    include ./header.jade
+
+    p!= message
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")

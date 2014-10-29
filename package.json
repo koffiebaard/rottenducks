@@ -1,0 +1,34 @@
+{
+  "name": "rottenducks",
+  "version": "1.0.0",
+  "description": "DUCKS ===========",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.9.8",
+    "fs": "0.0.2",
+    "grunt-cli": "^0.1.13",
+    "jade": "^1.7.0",
+    "jsdom": "^1.0.3",
+    "mongodb": "^1.4.19",
+    "mongoose": "^3.8.17",
+    "xml2js": "^0.4.4",
+    "yargs": "^1.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wisc/rottenducks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wisc/rottenducks/issues"
+  },
+  "homepage": "https://github.com/wisc/rottenducks"
+}

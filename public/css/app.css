@@ -1,0 +1,10 @@
+body {
+    color: #333;
+}
+
+
+div.stats div.project {
+	width: 150px;
+	float: left;
+	padding: 10px;
+}

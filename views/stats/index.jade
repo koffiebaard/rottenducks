@@ -1,0 +1,17 @@
+html
+  head
+    title!= title
+    link(rel="stylesheet", href="/css/app.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  body
+    include ../header.jade
+
+    div.stats
+      h1| stats stats stats
+      strong!=number_of_projects
+      span| projects crawled
+
+      each project in projects
+        div.project!=project.name
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
