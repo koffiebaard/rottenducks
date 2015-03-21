@@ -1,4 +1,4 @@
-var OpenHub = require('../models/OpenHub.js');
+var OpenHub = require('../models/openhub.js');
 
 exports.index = function(req, res, next){
 	OpenHub.find({}, function(err, projects){
