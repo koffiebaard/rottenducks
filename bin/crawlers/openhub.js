@@ -8,6 +8,9 @@ var argv = require('yargs').argv,
 require('../../lib/db.js');
 global.logger = require('../../lib/logger');
 
+
+var verbose = argv.v || false;
+
 var openhub_api_key = Settings.crawler_openhub_api_key;
 
 if (argv.api_key) {
@@ -43,7 +46,7 @@ for (var page_to_crawl = crawl_page_from; page_to_crawl <= crawl_page_to; page_t
 
 		res.on('end', function () {
 			parseString(xml, function (err, serialized_xml) {
-console.log("we have results!");
+console.log("we have a fetched page!");
 				var projects = OpenHubUtils.fixProjects(serialized_xml);
 
 				for (var id in projects) {
