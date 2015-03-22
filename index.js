@@ -3,6 +3,7 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose');
+    argv = require('yargs').argv;
 
 require('./lib/db.js');
 global.logger = require('./lib/logger');
@@ -22,7 +23,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Setup server
-var server = app.listen(3000, function () {
+
+var listenOnPort = 3000;
+
+if (argv.port)
+    listenOnPort = argv.port;
+
+var server = app.listen(listenOnPort, function () {
 
 	var port = server.address().port;
 	console.log('listening on %s', port);

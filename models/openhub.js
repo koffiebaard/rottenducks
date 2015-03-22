@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var OpenHubSchema = mongoose.Schema({
+var Schema = mongoose.Schema({
     id: String,
 	name: String,
 	url: String,
@@ -23,4 +23,4 @@ var OpenHubSchema = mongoose.Schema({
 	links: String
 });
 
-module.exports = mongoose.model('OpenHub', OpenHubSchema);
+module.exports = mongoose.model('OpenHub', Schema);
